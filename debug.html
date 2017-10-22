@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="stylesheet" href="bulma.min.css">
+</head>
+<body>
+  <div class="container is-fluid">
+
+    <div class="card">
+
+      <div class="card-content">
+        <canvas id="screen" width="160" height="144" style="border: 1px solid #000"></canvas>
+        
+		<div>
+		  <button id="bup">U</button>
+		  <button id="bleft">L</button>
+		  <button id="bright">R</button>
+		  <button id="bdown">D</button>
+		  <button id="ba">A</button>
+		  <button id="bb">B</button>
+		  <button id="bstart">start</button>
+		  <button id="bselect">select</button>
+		</div>
+	  </div>
+
+      <div class="card-footer">
+        <a class="card-footer-item" id="run" onclick="gb_start()">[ > ]</a>
+        <a class="card-footer-item" id="reset" onclick="gb_reset()">[ << ]</a>
+        <a class="card-footer-item" id="goto" onclick="gb_goto(window.prompt('Address'))">...</a>
+        <a class="card-footer-item" id="step" onclick="gb_step()">[ stp ]</a>
+      </div>
+
+    </div>
+
+    <div class="panel">
+      <div class="panel-tabs">
+        <p><div id="regs" style="font-family: monospace"></div></p>
+      </div>
+      <div class="panel-block">
+        <div id="code" style="font-family: monospace; height: 300px; width: 100%; overflow: auto"></div>
+      </div>
+	  <div class="panel-block">
+		<div class="select is-small"><select id="hi" onchange="gb_mem_dump()"></select></div>
+		<div class="select is-small"><select id="lo" onchange="gb_mem_dump()"></select></div>
+      </div>
+	  <div class="panel-block">
+		<div id="dump" style="font-family: monospace; width: 100%; overflow: auto"></div>
+	  </div>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="js/gb.js"></script>
+</body>
+</html>
+
