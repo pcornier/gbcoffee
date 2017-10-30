@@ -1,6 +1,6 @@
 # GBCoffee
 
-A GameBoy emulator written in Coffeescript and developped mostly on my smartphone with Termux &#x2764; during traffic jams in Geneva.
+A GameBoy emulator written in Coffeescript and developed mostly on my smartphone with Termux &#x2764; during traffic jams in Geneva, Switzerland.
 
 This is still a WIP but it can run some games like Tetris, Super Mario Land or Zelda. Additionally, it contains a basic integrated debugger.
 
